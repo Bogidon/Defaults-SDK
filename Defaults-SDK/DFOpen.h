@@ -11,8 +11,8 @@
 @interface DFOpen : NSObject
 
 # pragma mark - Navigation
-+ (void)showAddress:(NSString*)address;
-+ (void)navigateToAddress:(NSString*)toAddress fromAddress:(NSString*)fromAddress;
++ (void)navigateToAddress:(NSString*)destinationAddress;
++ (void)navigateToAddress:(NSString*)destinationAddress startingAddress:(NSString*)startingAddress;
 
 # pragma mark - Mail
 + (void)mail:(NSString*)to;

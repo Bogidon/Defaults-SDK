@@ -29,8 +29,23 @@
 }
 
 # pragma mark - Navigation
-+ (void)showAddress:(NSString*)address {
++ (void)navigateToAddress:(NSString*)destinationAddress {
+    [self navigateToAddress:destinationAddress startingAddress:nil];
+}
++ (void)navigateToAddress:(NSString*)destinationAddress startingAddress:(NSString*)startingAddress; {
+    // Make string URL-friendly
     address = [self urlEncode:address];
+
+    // Create url string
+    NSString *string;
+    if ([DFOpen appExists]) {
+        string = [NSString stringWithFormat:@"%@%@?daddr=%@&saddr=%@", AppBaseURL, AppNavigationDomain, destinationAddress, startingAddress];
+    } else {
+        string = [NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%@", destinationAddress, startingAddresss];
+    }
+    
+    // Open URL
+    [DFOpen openURL:string];
 }
 
 # pragma mark - Mail
