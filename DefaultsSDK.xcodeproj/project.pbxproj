@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4326A8F21B9A99640050E0EE /* Defaults-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4326A8F11B9A99640050E0EE /* Defaults-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4326A8F21B9A99640050E0EE /* DefaultsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4326A8F11B9A99640050E0EE /* DefaultsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4326A8F81B9A99640050E0EE /* DefaultsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326A8EC1B9A99640050E0EE /* DefaultsSDK.framework */; };
 		4326A8FF1B9A99640050E0EE /* Defaults_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326A8FE1B9A99640050E0EE /* Defaults_SDKTests.m */; };
 		432C2CDA1B9AAFC500A7737F /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = 432C2CD81B9AAFC500A7737F /* Constants.h */; };
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		4326A8EC1B9A99640050E0EE /* DefaultsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DefaultsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4326A8F01B9A99640050E0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4326A8F11B9A99640050E0EE /* Defaults-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Defaults-SDK.h"; sourceTree = "<group>"; };
+		4326A8F11B9A99640050E0EE /* DefaultsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultsSDK.h; sourceTree = "<group>"; };
 		4326A8F71B9A99640050E0EE /* DefaultsSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefaultsSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4326A8FD1B9A99640050E0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4326A8FE1B9A99640050E0EE /* Defaults_SDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Defaults_SDKTests.m; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		4326A8E21B9A99640050E0EE = {
 			isa = PBXGroup;
 			children = (
-				4326A8EE1B9A99640050E0EE /* Defaults-SDK */,
+				4326A8EE1B9A99640050E0EE /* DefaultsSDK */,
 				4326A8FB1B9A99640050E0EE /* Defaults-SDKTests */,
 				4326A8ED1B9A99640050E0EE /* Products */,
 			);
@@ -76,16 +76,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4326A8EE1B9A99640050E0EE /* Defaults-SDK */ = {
+		4326A8EE1B9A99640050E0EE /* DefaultsSDK */ = {
 			isa = PBXGroup;
 			children = (
-				4326A8F11B9A99640050E0EE /* Defaults-SDK.h */,
+				4326A8F11B9A99640050E0EE /* DefaultsSDK.h */,
 				43F2DD371B9A9BE100837376 /* DFOpen.h */,
 				43F2DD381B9A9BE100837376 /* DFOpen.m */,
 				432C2CD81B9AAFC500A7737F /* Constants.h */,
 				432C2CD91B9AAFC500A7737F /* Constants.m */,
 				4326A8EF1B9A99640050E0EE /* Supporting Files */,
 			);
+			name = DefaultsSDK;
 			path = "Defaults-SDK";
 			sourceTree = "<group>";
 		};
@@ -122,7 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F2DD391B9A9BE100837376 /* DFOpen.h in Headers */,
-				4326A8F21B9A99640050E0EE /* Defaults-SDK.h in Headers */,
+				4326A8F21B9A99640050E0EE /* DefaultsSDK.h in Headers */,
 				432C2CDA1B9AAFC500A7737F /* Constants.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

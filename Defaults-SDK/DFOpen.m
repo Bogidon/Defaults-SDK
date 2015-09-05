@@ -17,7 +17,7 @@
 }
 
 + (void)openURL:(NSString*)string {
-    NSURL *url = [NSURL URLWithString:string];
+    NSURL *url = [NSURL URLWithString:[self urlEncode:string]];
     if (![[UIApplication sharedApplication] openURL:url])
     {
         NSLog(@"%@%@",@"Failed to Open URL: ",[url description]);
