@@ -10,6 +10,8 @@
 		4326A8F21B9A99640050E0EE /* Defaults-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4326A8F11B9A99640050E0EE /* Defaults-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4326A8F81B9A99640050E0EE /* Defaults-SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326A8EC1B9A99640050E0EE /* Defaults-SDK.framework */; };
 		4326A8FF1B9A99640050E0EE /* Defaults_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326A8FE1B9A99640050E0EE /* Defaults_SDKTests.m */; };
+		43F2DD391B9A9BE100837376 /* DFOpen.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F2DD371B9A9BE100837376 /* DFOpen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43F2DD3A1B9A9BE100837376 /* DFOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F2DD381B9A9BE100837376 /* DFOpen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		4326A8F71B9A99640050E0EE /* Defaults-SDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Defaults-SDKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4326A8FD1B9A99640050E0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4326A8FE1B9A99640050E0EE /* Defaults_SDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Defaults_SDKTests.m; sourceTree = "<group>"; };
+		43F2DD371B9A9BE100837376 /* DFOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOpen.h; sourceTree = "<group>"; };
+		43F2DD381B9A9BE100837376 /* DFOpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFOpen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				4326A8F11B9A99640050E0EE /* Defaults-SDK.h */,
+				43F2DD371B9A9BE100837376 /* DFOpen.h */,
+				43F2DD381B9A9BE100837376 /* DFOpen.m */,
 				4326A8EF1B9A99640050E0EE /* Supporting Files */,
 			);
 			path = "Defaults-SDK";
@@ -109,6 +115,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F2DD391B9A9BE100837376 /* DFOpen.h in Headers */,
 				4326A8F21B9A99640050E0EE /* Defaults-SDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F2DD3A1B9A9BE100837376 /* DFOpen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
