@@ -24,14 +24,36 @@
     }
 }
 
-- (void)mail:(NSString*)to cc:(NSString*)cc bcc:(NSString*)bcc subject:(NSString*)subject body:(NSString*)body
++ (NSString*)urlEncode:(NSString*)string {
+    return string ? [string stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding] : @"";
+}
+
+# pragma mark - Navigation
++ (void)showAddress:(NSString*)address {
+    address = [self urlEncode:address];
+}
+
+# pragma mark - Mail
++ (void)mail:(NSString*)to {
+    [self mail:to cc:nil bcc:nil subject:nil body:nil];
+}
++ (void)mail:(NSString*)to cc:(NSString*)cc {
+    [self mail:to cc:cc bcc:nil subject:nil body:nil];
+}
++ (void)mail:(NSString*)to cc:(NSString*)cc bcc:(NSString*)bcc {
+    [self mail:to cc:cc bcc:bcc subject:nil body:nil];
+}
++ (void)mail:(NSString*)to cc:(NSString*)cc bcc:(NSString*)bcc subject:(NSString*)subject {
+        [self mail:to cc:cc bcc:bcc subject:subject body:nil];
+}
++ (void)mail:(NSString*)to cc:(NSString*)cc bcc:(NSString*)bcc subject:(NSString*)subject body:(NSString*)body
 {
     // Make strings URL-friendly
-    to = [to stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    cc = [cc stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    bcc = [bcc stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    subject = [subject stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    body = [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    to = [self urlEncode:to];
+    cc = [self urlEncode:cc];
+    bcc = [self urlEncode:bcc];
+    subject = [self urlEncode:subject];
+    body = [self urlEncode:body];
     
     // Create url string
     NSString *string;
@@ -45,8 +67,13 @@
     [DFOpen openURL:string];
 }
 
-- (void)openURL:(NSString *)inputURL
+# pragma mark - Browser
++ (void)browser:(NSString *)inputURL
 {
+    // Make string URL-friendly
+    inputURL = [self urlEncode:inputURL];
+    
+    // Create url string
     NSString *string;
     if ([DFOpen appExists]) {
         string = [NSString stringWithFormat:@"%@%@?url=%@", AppBaseURL, AppBrowserDomain, inputURL];
@@ -54,12 +81,8 @@
         string = inputURL;
     }
     
-    NSURL *url = [NSURL URLWithString:string];
-    
-    if (![[UIApplication sharedApplication] openURL:url])
-    {
-        NSLog(@"%@%@",@"Failed to Open URL: ",[url description]);
-    }
+    // Open url
+    [DFOpen openURL:string];
 }
 
 @end
