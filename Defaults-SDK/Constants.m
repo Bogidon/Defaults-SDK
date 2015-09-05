@@ -13,4 +13,4 @@ NSString * const AppBaseURL = @"comdefaults://";
 NSString * const MailtoBaseURL = @"mailto:";
 NSString * const AppBrowserDomain = @"browser";
 NSString * const AppMailDomain = @"mail";
-NSString * const AppNavigationDomain = @"navigation";
+NSString * const AppNavigationDomain = @"navigate";

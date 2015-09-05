@@ -34,14 +34,14 @@
 }
 + (void)navigateToAddress:(NSString*)destinationAddress startingAddress:(NSString*)startingAddress; {
     // Make string URL-friendly
-    address = [self urlEncode:address];
+    destinationAddress = [self urlEncode:destinationAddress];
 
     // Create url string
     NSString *string;
     if ([DFOpen appExists]) {
         string = [NSString stringWithFormat:@"%@%@?daddr=%@&saddr=%@", AppBaseURL, AppNavigationDomain, destinationAddress, startingAddress];
     } else {
-        string = [NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%@", destinationAddress, startingAddresss];
+        string = [NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%@", destinationAddress, startingAddress];
     }
     
     // Open URL

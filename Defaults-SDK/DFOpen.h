@@ -24,4 +24,12 @@
 # pragma mark - Browser
 + (void)browser:(NSString *)inputURL;
 
+# pragma mark - Twitter
++ (void)composeTweet:(NSString*)message;
++ (void)findTweet:(NSString*)url;
+
+# pragma mark - Weather
+
+# pragma mark -
+
 @end
