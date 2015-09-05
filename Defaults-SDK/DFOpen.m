@@ -18,9 +18,11 @@
 
 + (void)openURL:(NSString*)string {
     NSURL *url = [NSURL URLWithString:[self urlEncode:string]];
-    if (![[UIApplication sharedApplication] openURL:url])
-    {
-        NSLog(@"%@%@",@"Failed to Open URL: ",[url description]);
+    if ([[UIApplication sharedApplication] canOpenURL:url]){
+        if (![[UIApplication sharedApplication] openURL:url])
+        {
+            NSLog(@"%@%@",@"Failed to Open URL: ",[url description]);
+        }
     }
 }
 
@@ -41,7 +43,7 @@
     if ([DFOpen appExists]) {
         string = [NSString stringWithFormat:@"%@%@?daddr=%@&saddr=%@", AppBaseURL, AppNavigationDomain, destinationAddress, startingAddress];
     } else {
-        string = [NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%@", destinationAddress, startingAddress];
+        string = [NSString stringWithFormat:@"%@?daddr=%@&saddr=%@", AppleMapsBaseURL, destinationAddress, startingAddress];
     }
     
     // Open URL
@@ -94,6 +96,40 @@
         string = [NSString stringWithFormat:@"%@%@?url=%@", AppBaseURL, AppBrowserDomain, inputURL];
     } else {
         string = inputURL;
+    }
+    
+    // Open url
+    [DFOpen openURL:string];
+}
+
+# pragma mark - Twitter
++ (void)composeTweet:(NSString*)message
+{
+    // Make string URL-friendly
+    message = [self urlEncode:message];
+    
+    // Create url string
+    NSString *string;
+    if ([DFOpen appExists]) {
+        string = [NSString stringWithFormat:@"%@%@?hashtag=%@", AppBaseURL, AppTwitterComposeDomain, message];
+    } else {
+        string = [NSString stringWithFormat:@"%@post?message=%@", TwitterBaseURL, message];
+    }
+    
+    // Open url
+    [DFOpen openURL:string];
+}
+
++ (void)searchTwitter:(NSString*)searchTerm {
+    // Make string URL-friendly
+    searchTerm = [self urlEncode:searchTerm];
+    
+    // Create url string
+    NSString *string;
+    if ([DFOpen appExists]) {
+        string = [NSString stringWithFormat:@"%@%@?hashtag=%@", AppBaseURL, AppTwitterSearchDomain, searchTerm];
+    } else {
+        string = [NSString stringWithFormat:@"%@search?query=%@", TwitterBaseURL, searchTerm];
     }
     
     // Open url

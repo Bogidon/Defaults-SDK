@@ -26,10 +26,6 @@
 
 # pragma mark - Twitter
 + (void)composeTweet:(NSString*)message;
-+ (void)findTweet:(NSString*)url;
-
-# pragma mark - Weather
-
-# pragma mark -
++ (void)findTwitterHashtag:(NSString*)hashtag;
 
 @end
