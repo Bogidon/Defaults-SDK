@@ -11,25 +11,41 @@
 
 @implementation DFOpen
 
++ (BOOL)appExists {
+    return NO;
+}
+
 - (void)mail:(NSString*)to cC:(NSString*)cC bCC:(NSString*)bCC subject:(NSString*)subject body:(NSString*)body
 {
-    NSString *compiledMailString = [NSString stringWithFormat:@"comdefaults:%@?cc=%@&bcc=%@&subject=%@&body=%@", to, cC, bCC, subject, body];
+    NSString *string;
+    if ([DFOpen appExists]) {
+        string = [NSString stringWithFormat:@"comdefaults://mail?to=%@&cc=%@&bcc=%@&subject=%@&body=%@", to, cC, bCC, subject, body];
+    } else {
+        string = @"";
+    }
     
-    NSURL *urlFromString = [NSURL URLWithString:compiledMailString];
+    NSURL *url = [NSURL URLWithString:string];
     
-    if (![[UIApplication sharedApplication] openURL:urlFromString])
+    if (![[UIApplication sharedApplication] openURL:url])
     {
-        NSLog(@"%@%@",@"Failed to Open URL: ",[urlFromString description]);
+        NSLog(@"%@%@",@"Failed to Open URL: ",[url description]);
     }
 }
 
-- (void)openURL:(NSString *)urlToOpen
+- (void)openURL:(NSString *)inputURL
 {
-    NSURL *urlFromString = [NSURL URLWithString:urlToOpen];
+    NSString *string;
+    if ([DFOpen appExists]) {
+        string = [NSString stringWithFormat:@"comdefaults://browser?url=%@", inputURL];
+    } else {
+        string = inputURL;
+    }
     
-    if (![[UIApplication sharedApplication] openURL:urlFromString])
+    NSURL *url = [NSURL URLWithString:string];
+    
+    if (![[UIApplication sharedApplication] openURL:url])
     {
-        NSLog(@"%@%@",@"Failed to Open URL: ",[urlFromString description]);
+        NSLog(@"%@%@",@"Failed to Open URL: ",[url description]);
     }
 }
 
