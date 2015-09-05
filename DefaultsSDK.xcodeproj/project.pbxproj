@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4326A8F21B9A99640050E0EE /* Defaults-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4326A8F11B9A99640050E0EE /* Defaults-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4326A8F81B9A99640050E0EE /* Defaults-SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326A8EC1B9A99640050E0EE /* Defaults-SDK.framework */; };
+		4326A8F81B9A99640050E0EE /* DefaultsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326A8EC1B9A99640050E0EE /* DefaultsSDK.framework */; };
 		4326A8FF1B9A99640050E0EE /* Defaults_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326A8FE1B9A99640050E0EE /* Defaults_SDKTests.m */; };
 		43F2DD391B9A9BE100837376 /* DFOpen.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F2DD371B9A9BE100837376 /* DFOpen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43F2DD3A1B9A9BE100837376 /* DFOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F2DD381B9A9BE100837376 /* DFOpen.m */; };
@@ -25,10 +25,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4326A8EC1B9A99640050E0EE /* Defaults-SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Defaults-SDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4326A8EC1B9A99640050E0EE /* DefaultsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DefaultsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4326A8F01B9A99640050E0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4326A8F11B9A99640050E0EE /* Defaults-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Defaults-SDK.h"; sourceTree = "<group>"; };
-		4326A8F71B9A99640050E0EE /* Defaults-SDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Defaults-SDKTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4326A8F71B9A99640050E0EE /* DefaultsSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefaultsSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4326A8FD1B9A99640050E0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4326A8FE1B9A99640050E0EE /* Defaults_SDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Defaults_SDKTests.m; sourceTree = "<group>"; };
 		43F2DD371B9A9BE100837376 /* DFOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFOpen.h; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4326A8F81B9A99640050E0EE /* Defaults-SDK.framework in Frameworks */,
+				4326A8F81B9A99640050E0EE /* DefaultsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,8 +66,8 @@
 		4326A8ED1B9A99640050E0EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4326A8EC1B9A99640050E0EE /* Defaults-SDK.framework */,
-				4326A8F71B9A99640050E0EE /* Defaults-SDKTests.xctest */,
+				4326A8EC1B9A99640050E0EE /* DefaultsSDK.framework */,
+				4326A8F71B9A99640050E0EE /* DefaultsSDKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,9 +123,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4326A8EB1B9A99640050E0EE /* Defaults-SDK */ = {
+		4326A8EB1B9A99640050E0EE /* DefaultsSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4326A9021B9A99640050E0EE /* Build configuration list for PBXNativeTarget "Defaults-SDK" */;
+			buildConfigurationList = 4326A9021B9A99640050E0EE /* Build configuration list for PBXNativeTarget "DefaultsSDK" */;
 			buildPhases = (
 				4326A8E71B9A99640050E0EE /* Sources */,
 				4326A8E81B9A99640050E0EE /* Frameworks */,
@@ -136,14 +136,14 @@
 			);
 			dependencies = (
 			);
-			name = "Defaults-SDK";
+			name = DefaultsSDK;
 			productName = "Defaults-SDK";
-			productReference = 4326A8EC1B9A99640050E0EE /* Defaults-SDK.framework */;
+			productReference = 4326A8EC1B9A99640050E0EE /* DefaultsSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4326A8F61B9A99640050E0EE /* Defaults-SDKTests */ = {
+		4326A8F61B9A99640050E0EE /* DefaultsSDKTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4326A9051B9A99640050E0EE /* Build configuration list for PBXNativeTarget "Defaults-SDKTests" */;
+			buildConfigurationList = 4326A9051B9A99640050E0EE /* Build configuration list for PBXNativeTarget "DefaultsSDKTests" */;
 			buildPhases = (
 				4326A8F31B9A99640050E0EE /* Sources */,
 				4326A8F41B9A99640050E0EE /* Frameworks */,
@@ -154,9 +154,9 @@
 			dependencies = (
 				4326A8FA1B9A99640050E0EE /* PBXTargetDependency */,
 			);
-			name = "Defaults-SDKTests";
+			name = DefaultsSDKTests;
 			productName = "Defaults-SDKTests";
-			productReference = 4326A8F71B9A99640050E0EE /* Defaults-SDKTests.xctest */;
+			productReference = 4326A8F71B9A99640050E0EE /* DefaultsSDKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4326A8E61B9A99640050E0EE /* Build configuration list for PBXProject "Defaults-SDK" */;
+			buildConfigurationList = 4326A8E61B9A99640050E0EE /* Build configuration list for PBXProject "DefaultsSDK" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -188,8 +188,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4326A8EB1B9A99640050E0EE /* Defaults-SDK */,
-				4326A8F61B9A99640050E0EE /* Defaults-SDKTests */,
+				4326A8EB1B9A99640050E0EE /* DefaultsSDK */,
+				4326A8F61B9A99640050E0EE /* DefaultsSDKTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +233,7 @@
 /* Begin PBXTargetDependency section */
 		4326A8FA1B9A99640050E0EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4326A8EB1B9A99640050E0EE /* Defaults-SDK */;
+			target = 4326A8EB1B9A99640050E0EE /* DefaultsSDK */;
 			targetProxy = 4326A8F91B9A99640050E0EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -372,7 +372,7 @@
 				);
 				INFOPLIST_FILE = "Defaults-SDKTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DefaultsSDKTests;
 			};
 			name = Debug;
 		};
@@ -385,14 +385,14 @@
 				);
 				INFOPLIST_FILE = "Defaults-SDKTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DefaultsSDKTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4326A8E61B9A99640050E0EE /* Build configuration list for PBXProject "Defaults-SDK" */ = {
+		4326A8E61B9A99640050E0EE /* Build configuration list for PBXProject "DefaultsSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4326A9001B9A99640050E0EE /* Debug */,
@@ -401,7 +401,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4326A9021B9A99640050E0EE /* Build configuration list for PBXNativeTarget "Defaults-SDK" */ = {
+		4326A9021B9A99640050E0EE /* Build configuration list for PBXNativeTarget "DefaultsSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4326A9031B9A99640050E0EE /* Debug */,
@@ -410,7 +410,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4326A9051B9A99640050E0EE /* Build configuration list for PBXNativeTarget "Defaults-SDKTests" */ = {
+		4326A9051B9A99640050E0EE /* Build configuration list for PBXNativeTarget "DefaultsSDKTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4326A9061B9A99640050E0EE /* Debug */,

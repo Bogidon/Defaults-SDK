@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Defaults-SDK.xcodeproj">
+      location = "self:/Users/GrantGoodman/Documents/code/PennApps/Defaults-SDK/DefaultsSDK.xcodeproj">
    </FileRef>
 </Workspace>

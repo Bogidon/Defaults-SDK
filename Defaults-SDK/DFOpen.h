@@ -16,9 +16,9 @@
 
 # pragma mark - Mail
 - (void)email:(NSString*)email;
-- (void)email:(NSString*)email subject:(NSString*) subject;
+- (void)eMailToAddress:(NSString*)toAddress cC:(NSString*)cC bCC:(NSString*)bCC messageSubject:(NSString*)messageSubject messageBody:(NSString*)messageBody;
 
 # pragma mark - Browser
-- (void)openURL:(NSString*)url;
+- (void)openURL:(NSString*)urlToOpen;
 
 @end
