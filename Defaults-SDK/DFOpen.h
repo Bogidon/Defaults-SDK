@@ -15,8 +15,8 @@
 - (void)navigateToAddress:(NSString*)toAddress fromAddress:(NSString*)fromAddress;
 
 # pragma mark - Mail
-- (void)email:(NSString*)email;
-- (void)eMailToAddress:(NSString*)toAddress cC:(NSString*)cC bCC:(NSString*)bCC messageSubject:(NSString*)messageSubject messageBody:(NSString*)messageBody;
+- (void)mail:(NSString*)to;
+- (void)mail:(NSString*)to cC:(NSString*)cC bCC:(NSString*)bCC subject:(NSString*)subject body:(NSString*)body;
 
 # pragma mark - Browser
 - (void)openURL:(NSString*)urlToOpen;

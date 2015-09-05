@@ -11,9 +11,9 @@
 
 @implementation DFOpen
 
-- (void)eMailToAddress:(NSString *)toAddress cC:(NSString *)cC bCC:(NSString *)bCC messageSubject:(NSString *)messageSubject messageBody:(NSString *)messageBody
+- (void)mail:(NSString*)to cC:(NSString*)cC bCC:(NSString*)bCC subject:(NSString*)subject body:(NSString*)body
 {
-    NSString *compiledMailString = [NSString stringWithFormat:@"mailto:%@?cc=%@&bcc=%@&subject=%@&body=%@", toAddress, cC, bCC, messageSubject, messageBody];
+    NSString *compiledMailString = [NSString stringWithFormat:@"comdefaults:%@?cc=%@&bcc=%@&subject=%@&body=%@", to, cC, bCC, subject, body];
     
     NSURL *urlFromString = [NSURL URLWithString:compiledMailString];
     
