@@ -27,7 +27,7 @@
 }
 
 + (NSString*)urlEncode:(NSString*)string {
-    return string ? [string stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding] : @"";
+    return string ? [string stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding] : @"nil";
 }
 
 # pragma mark - Navigation
@@ -37,6 +37,7 @@
 + (void)navigateToAddress:(NSString*)destinationAddress startingAddress:(NSString*)startingAddress; {
     // Make string URL-friendly
     destinationAddress = [self urlEncode:destinationAddress];
+    startingAddress = [self urlEncode:startingAddress];
 
     // Create url string
     NSString *string;
